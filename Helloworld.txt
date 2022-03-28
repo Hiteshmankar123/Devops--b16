@@ -1,4 +1,0 @@
-hello world 
-welcome to cloudblitz
-
-This is git session
