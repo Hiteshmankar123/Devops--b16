@@ -2,12 +2,12 @@ pipeline {
     agent any 
     stages {stage('Pull') { 
             steps {
-                git 'https://github.com/Hiteshmankar123/Devops--b16.git'
+               
             }
         }
         stage('Build') { 
             steps {
-                echo 'Build Successful'
+               l'
             }
         }
         stage('Test') { 
