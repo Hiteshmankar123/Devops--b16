@@ -6,6 +6,9 @@ node {
         // 
     }
     stage('Deploy') { 
+        //
+         {  
+    stage('Build') { 
         // 
     }
 }
