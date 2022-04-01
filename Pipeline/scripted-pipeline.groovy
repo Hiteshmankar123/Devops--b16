@@ -8,7 +8,7 @@ node {
     stage('Test') { 
         //
     }
-    stage('Build') { 
+    stage('Deploy') { 
         // 
     }
 }
