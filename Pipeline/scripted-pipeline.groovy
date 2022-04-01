@@ -9,6 +9,6 @@ node {
         echo 'Test successful'
     }
     stage('Deploy') { 
-        // 
+        echo ''
     }
 }
