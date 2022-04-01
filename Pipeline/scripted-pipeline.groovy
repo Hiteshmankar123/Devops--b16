@@ -3,10 +3,10 @@ node {
         git 'https://github.com/Hiteshmankar123/Devops--b16.git'
     }
     stage('Build') { 
-        echo 'B'
+        echo 'Build successful'
     }
     stage('Test') { 
-        //
+        echo ''
     }
     stage('Deploy') { 
         // 
