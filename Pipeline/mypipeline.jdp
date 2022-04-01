@@ -2,12 +2,12 @@ pipeline {
     agent any 
     stages {stage('Pull') { 
             steps {
-               echo ''
+               echo 'Pull successful'
             }
         }
         stage('Build') { 
             steps {
-               
+              echo 
             }
         }
         stage('Test') { 
