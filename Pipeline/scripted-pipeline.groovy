@@ -5,7 +5,7 @@ node {
     stage('Build') { 
         // 
     }
-    stage('Deploy') { 
+    stage('Test') { 
         //
     }
     stage('Build') { 
