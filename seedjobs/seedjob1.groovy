@@ -1,6 +1,3 @@
 job('example') {
     steps {
-        shell('echo welcome to cloudblitz')
-    }
-cat seedjob,groovy
- 
+        shell('echo welcome to cloudblitz'
