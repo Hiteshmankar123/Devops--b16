@@ -1,5 +1,6 @@
-job('example1') {
+job('example') {
     steps {
-        shell('welcome to cloudblitz')
+        shell('echo START')
+        gradle('check')
     }
 }
