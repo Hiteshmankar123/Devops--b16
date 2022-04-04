@@ -1,6 +1,6 @@
 job('example') {
     steps {
-        shell('')
+        shell('welcome to cloudblitz')
         
     }
 }
