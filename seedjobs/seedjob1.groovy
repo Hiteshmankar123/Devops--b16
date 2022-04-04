@@ -1,5 +1,5 @@
 job('example') {
     steps {
-        shell('echo  ')
+        shell('echo welcome to  loudblitz ')
     }
 }
