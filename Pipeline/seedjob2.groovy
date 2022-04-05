@@ -1,5 +1,5 @@
   
-  displayName('scripted')
+  displayName('scripted2')
   
   keepDependencies(false)
   
