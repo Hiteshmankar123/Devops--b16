@@ -5,7 +5,7 @@ pipeline {
                echo 'Pull successful'
             }
         }
-        stage('Build') { Build
+        stage('Build') {
             steps {
               echo 'Build successful' 
             }
