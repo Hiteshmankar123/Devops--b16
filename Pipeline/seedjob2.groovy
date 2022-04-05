@@ -1,5 +1,5 @@
   
-  displayName('scripted-new-pipeline_converted')
+  displayName('scripted')
   
   keepDependencies(false)
   
