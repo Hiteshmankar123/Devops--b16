@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                echo ''
+                echo 'https://github.com/nitintiwari5678/studentapp-ui.git'
             }
         }
         stage('Build') {
