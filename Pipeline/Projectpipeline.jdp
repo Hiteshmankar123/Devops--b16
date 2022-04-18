@@ -1,6 +1,6 @@
 node {  
     stage('Pull') { 
-        git 'https://github.com/Hiteshmankar123/Devops--b16.git'
+        git 'https://github.com/omprakashbhanarkar/studentapp-ui.git'
     }
     stage('Build') { 
        sh 'mavel clean package'
