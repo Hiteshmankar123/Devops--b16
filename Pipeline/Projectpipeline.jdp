@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                branch ''
+                sh ''
             }
             steps {
                 echo 'Deploying'
