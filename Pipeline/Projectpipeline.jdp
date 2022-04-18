@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh 'mvn clean package'
             }  
-            
+        }    
             steps {
                 echo 'Deploying'
             }
