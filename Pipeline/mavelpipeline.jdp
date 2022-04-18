@@ -1,12 +1,19 @@
 node {  
-    stage('Pull') { 
+    stage('Pull') {
+        steps{ 
         git 'https://github.com/Hiteshmankar123/Devops--b16.git'
+        }
     }
     stage('Build') { 
-       echo 'build successful'
+       steps{
+           sh 'mvn sonar:sonar'
+        }
     }
     stage('Test') { 
-        echo 'Test successful'
+       steps{
+        }
+           sh 'mvn sonar:sonar'
+        }
     }
     stage('Deploy') { 
         echo 'Deploy successful'
