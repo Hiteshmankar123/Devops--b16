@@ -13,6 +13,7 @@ pipeline {
         }   
          stage('Test') {
             steps {
+                withSonarQube
                 sh 'mvn clean package'
             }
         }    
