@@ -1,0 +1,22 @@
+node {  
+    stage('Pull') {
+        steps{ 
+        git 'https://github.com/Hiteshmankar123/Devops--b16.git'
+        }
+    }
+    stage('Build') { 
+       steps{
+           sh 'mvn sonar:sonar'
+        }
+    }
+    stage('Test') { 
+       steps{
+        }
+           sh 'mvn sonar:sonar'
+        }
+    }
+    stage('Deploy') { 
+        echo 'Deploy successful'
+    }
+}
+
