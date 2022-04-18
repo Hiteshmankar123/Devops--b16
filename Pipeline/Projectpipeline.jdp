@@ -11,8 +11,12 @@ pipeline {
                 sh 'mvn clean package'
             } 
         }   
-        
+         stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
         }    
+           
             steps {
                 echo 'Deploying'
             }
