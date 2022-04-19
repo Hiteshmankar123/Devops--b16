@@ -1,25 +1,33 @@
 pipeline {
     agent any
     stages {
-        stage('Pull') {
+        stage('Pull'){
             steps {
                 git 'https://github.com/shubhamkalsait/studentapp-ui.git'
             }
         }
-        stage('Build') {
+        stage('Build'){
             steps {
-                sh 'mvn clean package'
-            } 
-        }   
-        stage('Test') {
+                sh 'mvn clean package '
+            }
+        }
+        stage('Test'){
             steps {
-                withSonarQubeEnv('sonar'){
-                sh 'mvn sonar:sonar'
-            }a
-        }    
-         stage('Deploy') {
+                withSonarQubeEnv('sonar') {
+                     sh 'mvn sonar:sonar'
+                }
+            }
+        }
+        stage('QualityCheck'){
             steps {
-                echo 'Deploying'
+                timeout(time: 1, unit: 'HOURS') {
+                    waitForQualityGate true
+                }
+            }
+        }
+        stage('Deploy'){
+            steps {
+                deploy adapters: [tomcat8(credentialsId: '36dace7b-e34e-457a-aaa6-b1c8e406d066', path: '', url: 'http://3.89.21.236:8080')], contextPath: '/', war: '**/*.war'
             }
         }
     }
