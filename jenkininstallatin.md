@@ -11,3 +11,4 @@ yum install jenkins
 # start jenkins services
 systemctl start jenkins
 systemctl enable jenkins 
+sudo update-alternatives --config java ---> error occurs failed then 
