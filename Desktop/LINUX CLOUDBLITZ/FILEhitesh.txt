@@ -1,0 +1,56 @@
+           # SSH SERVICES # (Secure Shell)
+           (default port number is 22)
+           (first version of ssh 1995 and designed by TATU YLONEN)
+           (give remotly access of two operating system)
+           Two type of Authentication:-
+           1. (PASSWORD BASED AUTHENTICATION)
+   step 1:-  install service ssh
+   step 2:-  firstly  two operating system server and client configure on single network
+             check system active or not 
+             systemctl status sshd      
+   step 3:- Then allow the port by using firewall
+            firewall-cmd --list-ports
+            firewall-cmd --add-port=22/tcp
+            systemctl restart sshd
+            ssh root@172.25.0.10 to access for server 
+            ssh root@172.25.0.15 to access for client
+
+
+
+           2. (keybased- Authentication)
+              Two keys are required :- 
+              [1] public key (.pub)  [2] private key (.pem)
+   step 1:-     Two operating system such as server and clint configure on single network
+   step 2:-     Then allow the port by using firewall
+              firewall-cmd --list-ports
+              firewall-cmd --add-port=22/tcp
+              systemctl restart sshd
+   step 3:-   server side:-
+             To generate the keys by using following cmd:-
+             ssh-keygen
+   step 4:-  rename the public key:-     cat id_rsa.pub > authorized_keys  
+   cmd:-     chmod 600 id_rsa
+             chmod 600 id_rsa.pub
+             scp id_rsa root@172.25.0.15:/root (for server) 
+             scp id_rsa root@172.25.0.10:/root (for client)
+             Access the server:-
+             ssh -i id_rsa root@172.25.0.15
+             ssh -i id_rsa root@172.25.0.10 
+  
+
+
+
+            # PORT FORWARDING #
+   STEP 1:- Open configuration file 
+   cmd:-    vim /etc/ssh/sshd_conf
+   step 2:- remove # symbol of line 17 and change port number for eg. 2020
+            semanage port -a -t ssh_port_t -p tcp 2020
+   step 3:- systemctl restart sshd
+            Add port no. to firewall
+            firewall-cmd --list-ports
+            firewall-cmd --permaanent --add-port=2020/tcp     
+            firewall-cmd --reload      
+            systemctl restart sshd
+   step 4:- on client side
+            ssh root@172.25.0.10 -p 2020
+            

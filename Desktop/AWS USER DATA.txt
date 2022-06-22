@@ -1,0 +1,40 @@
+#!/bin/bash
+yum update
+yum install httpd -y
+echo "<h1>Hello World</h1>" > /var/www/html/index.html
+systemctl start httpd
+systemctl enable httpd
+
+
+or 
+For classic load balancer:-
+
+#!/bin/bash
+yum update
+yum install httpd -y
+echo "<h1>This is webserver-01</h1>" > /var/www/html/index.html
+systemctl start httpd
+systemctl enable httpd
+ 
+For Application load balancer:-
+
+#!/bin/bash
+yum update
+yum install httpd -y
+echo "<h1>This is Homepage of "$HOSTNAME"</h1>" > /var/www/html/index.html
+systemctl start httpd
+systemctl enable httpd
+
+
+#!/bin/bash
+yum update
+yum install httpd -y
+mkdir -p /var/www/html/mobile
+echo "<h1>This is mobilepage of "$HOSTNAME"</h1>" > /var/www/html/mobile/index.html
+systemctl start httpd
+systemctl enable httpd
+
+
+
+
+

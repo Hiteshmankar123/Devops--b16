@@ -1,1 +1,5 @@
+<<<<<<< HEAD
  welcome cloud
+=======
+ welcome to nagpur
+>>>>>>> feature

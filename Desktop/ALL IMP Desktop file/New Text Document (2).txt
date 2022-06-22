@@ -1,0 +1,6 @@
+maven
+new item --> mavenproject--pipeline--build--set build description--add(pom.xml)--(clean package)---branch--scm--git--https://github.com/technicalguftgu/time-tracker.git
+
+save--build.
+
+

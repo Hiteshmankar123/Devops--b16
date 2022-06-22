@@ -1,0 +1,53 @@
+Q. Difference between IAM Role and IAM POlicy
+Q. Types of IAM Users
+Q. Difference between Access Key , Secrete Key and Roles 
+Q. What is trushted POlicy ?
+
+Q. What is S3 and its benefits ?
+Q. Difference between types of S3 storage classes
+Q. What is S3 lifecycle ?
+Q. Difference between S3, EBS, EFS
+Q. How to retrive data from Glacier ?
+
+Q. What is difference types of Instance types ?
+Q. How many EC2 instance hosted in your current project and 
+   which instance types in use general ?
+Q. How to expand EBS valume attached on Instance ?
+Q. How to change Instance type of running Instance ?
+Q. What is difference between AMI and Snapshot ?
+Q. How to create snapshot periodicaly ?
+Q. What is status check on EC2 Instance , 
+	if your application is not running,
+	how to trubleshhot ?
+Q. What is EBS volume types ?
+Q. Bootable volume in EBS
+Q. Difference between general purpose & provision IOPS
+Q. Realtime use of provisional IOPS
+Q. What is Elastic IP ? I want static IP on EC2 instance, how ? 
+Q. Difference between Application and Network Load Balancer
+Q. Types of Load Balancer
+Q. Realtime senario when you use application and Network load balancer
+Q. How to add multiple IP address to EC2 instance ?
+Q. How to add 2 security group in single EC2 instance ?
+Q. Difference between launch templates and launch configuration
+Q. Explain Autoscaling 
+Q. Types of Autoscaling 
+Q. TCP vs UDP
+Q. xfs vs ext4
+Q. How many security group created in single vpc ?
+Q. How to add multiple private IP in instance ?
+Q. maximun subnet create in VPC 
+Q. DHCP option set
+Q. S3 gateway
+Q. S3 endpoint
+Q. Types of Routable
+Q. subnet association
+Q. How to create vpc pairing
+Q. on which condition vpc pairing failed
+Q. Requirement of vpc pairing
+Q. How many CRDI block can be added in vpc
+Q. security group vs NACL
+Q. How to NAT configuration ?
+Q. Difference Network gateway and Egress only Network Gateway
+Q. Subnet group
+Q. how to connect on prim 

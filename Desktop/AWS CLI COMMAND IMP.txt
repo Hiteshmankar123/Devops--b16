@@ -1,0 +1,18 @@
+          # AWS CLI COMMAND REFERANCE USED FOR FASTLY WORK TO MANAGED AWS RESOURSES # 
+                                                                           DATE:- 10/02/2022
+*WEBSITE:- AWS CLI COMMAND REFERENCE (https://docs.aws.amazon.com/cli/latest/reference/)*
+COMMAND:-
+
+1.aws iam list-users
+2.aws iam create-user --user-name abc
+3. aws iam create-group --group-name tcs
+4.aws iam create-policy --policy-name s3policy --policy-document file://policy.json
+5. aws iam attach-group-policy --group-name tcs  --policy-arn  arn:aws:iam::998387653453:policy/s3policy
+6.aws s3 mb s3://aws-35-bucket
+7. aws s3 cp newfile1 s3://aws-35-bucket
+8.aws s3 cp s3://aws-35-bucket/newfile1 /mnt
+9. aws s3 rm s3://aws-35-bucket/newfile1
+10. aws s3 rb s3://aws-35-bucket
+11.aws ec2 run-instances --image-id ami-033b95fb8079dc481 --instance-type t2.micro --count 2 --security-groups default --region us-east-1 --key-name newaccount
+12.aws ec2 stop-instances --instance-ids i-09a90e8eed3e9677f  --region us-east-1
+13.aws ec2 terminate-instances --instance-ids i-0c949fba3d62078db  --region us-east-1

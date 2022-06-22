@@ -1,0 +1,50 @@
+##  jenkins pipeline ##
+ 
+--> create webserver of jenkins 
+--> then goto the console of jenkins 
+
+(manage plugin pipeline)
+--> then click on manage jenkins -> manage plugins --> select plugins on available (select pipeline)--> then install without restart
+
+(creation of job)
+--> goto dashboard click on new item provide name as (pipeline-1)--> select type(pipeline)--> GOTO PIPELINE(SCRIPT)-->
+--> click on pipeline syntax --> select sample steps
+https://www.jenkins.io/doc/book/pipeline/
+
+1) echo print msg --> 1)type any msg (PIPELINE BUILD SUCCESSFULLY,  2) (PIPELINE TEST SUCCESSFULLY), 3) (PIPELINE DEPLOY SUCCESSFULLY)
+  copy there output and paste on demo notepad script
+2) git --> then paste Repository URL of github -->branch (master),--> credential(none)--> then click on generate script
+-->then copy the script and paste on demo notepad script
+------------------------------------------------------------------------------------------------------
+   pipeline {
+    agent any 
+    stages {
+        stage('PULL') { 
+            steps {
+                git 'https://github.com/ganeshgohane/b-19.git'
+            }
+        }
+        stage('Build') { 
+            steps {
+                echo 'PIPELINE BUILD SUCCESSFULLY'
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo 'PIPELINE TEST SUCCESSFULLY'
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo 'PIPELINE DEPLOY SUCCESSFULLY'
+            }
+        }
+    }
+} 
+
+-----------------------------------------------------------------------------------------
+--> then save and apply 
+---> then build now
+--> then it gives error 
+--> then give ssh of jenkins server and install git 
+--> goto to console of jenkins and buid now then task is successfull.....
